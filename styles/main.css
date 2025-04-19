@@ -37,19 +37,23 @@ header {
     min-height: 100vh;
     background-color: var(--secondary-color);
     overflow: hidden;
+    padding-top: 70px; /* Add padding to prevent content from hiding behind fixed nav */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    position: absolute;
+    padding: 15px 40px;
+    position: fixed;
     width: 100%;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    top: 0;
 }
 
 .logo {
